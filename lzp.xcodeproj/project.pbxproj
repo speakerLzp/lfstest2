@@ -14,6 +14,7 @@
 		1C6F82C9283E1F5B0027B06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C6F82C8283E1F5B0027B06B /* Assets.xcassets */; };
 		1C6F82CC283E1F5B0027B06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C6F82CA283E1F5B0027B06B /* LaunchScreen.storyboard */; };
 		1C6F82CF283E1F5B0027B06B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6F82CE283E1F5B0027B06B /* main.m */; };
+		1C6F82E4283E219B0027B06B /* libSmAntiFraud.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C6F82E2283E219B0027B06B /* libSmAntiFraud.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		1C6F82CB283E1F5B0027B06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C6F82CD283E1F5B0027B06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C6F82CE283E1F5B0027B06B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C6F82E1283E219B0027B06B /* SmAntiFraud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmAntiFraud.h; sourceTree = "<group>"; };
+		1C6F82E2283E219B0027B06B /* libSmAntiFraud.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSmAntiFraud.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C6F82E4283E219B0027B06B /* libSmAntiFraud.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 		1C6F82BB283E1F5A0027B06B /* lzp */ = {
 			isa = PBXGroup;
 			children = (
+				1C6F82DD283E219B0027B06B /* smsdk */,
 				1C6F82BC283E1F5A0027B06B /* AppDelegate.h */,
 				1C6F82BD283E1F5A0027B06B /* AppDelegate.m */,
 				1C6F82BF283E1F5A0027B06B /* SceneDelegate.h */,
@@ -74,6 +79,47 @@
 				1C6F82CE283E1F5B0027B06B /* main.m */,
 			);
 			path = lzp;
+			sourceTree = "<group>";
+		};
+		1C6F82DD283E219B0027B06B /* smsdk */ = {
+			isa = PBXGroup;
+			children = (
+				1C6F82DE283E219B0027B06B /* smsdk_ios_3.0.6_build3_rsa */,
+				1C6F82E3283E219B0027B06B /* support */,
+			);
+			path = smsdk;
+			sourceTree = "<group>";
+		};
+		1C6F82DE283E219B0027B06B /* smsdk_ios_3.0.6_build3_rsa */ = {
+			isa = PBXGroup;
+			children = (
+				1C6F82DF283E219B0027B06B /* include */,
+				1C6F82E2283E219B0027B06B /* libSmAntiFraud.a */,
+			);
+			path = smsdk_ios_3.0.6_build3_rsa;
+			sourceTree = "<group>";
+		};
+		1C6F82DF283E219B0027B06B /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1C6F82E0283E219B0027B06B /* SmAntiFraud */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		1C6F82E0283E219B0027B06B /* SmAntiFraud */ = {
+			isa = PBXGroup;
+			children = (
+				1C6F82E1283E219B0027B06B /* SmAntiFraud.h */,
+			);
+			path = SmAntiFraud;
+			sourceTree = "<group>";
+		};
+		1C6F82E3283E219B0027B06B /* support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +350,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lzp/smsdk/smsdk_ios_3.0.6_build3_rsa",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lizhipeng.lzp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -330,6 +380,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/lzp/smsdk/smsdk_ios_3.0.6_build3_rsa",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lizhipeng.lzp;
