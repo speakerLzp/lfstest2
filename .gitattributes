@@ -1,2 +1,2 @@
 *.a filter=lfs diff=lfs merge=lfs -text
-lzp/smsdk/smsdk_ios_3.0.6_build3_rsa/libSmAntiFraud.a filter=lfs diff=lfs merge=lfs -text
+libSmAntiFraud.a filter=lfs diff=lfs merge=lfs -text
